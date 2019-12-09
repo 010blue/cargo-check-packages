@@ -60,7 +60,7 @@ fn main() {
     let path = Path::new(file_name);
 
     let mut file = match File::open(&path) {
-        Err(why) => panic!("{}, try to run `cargo generate-lockfile first`", why.description()),
+        Err(why) => panic!("{}, try to run `cargo generate-lockfile` first", why.description()),
         Ok(file) => file,
     };
 
